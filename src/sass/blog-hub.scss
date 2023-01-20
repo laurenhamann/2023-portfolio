@@ -1,0 +1,29 @@
+@use 'colors' as color;
+
+#blog-hub-title {
+    text-align: center;
+}
+
+#blog-hub-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: color.$offWhite;
+        .blog-link {
+            width: 80vw;
+            min-height: 200px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: color.$rust;
+            border-radius: 15px;
+            h2:hover {
+                font-style: italic;
+            }
+        }
+    }
+}
