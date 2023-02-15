@@ -13,71 +13,67 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-google-gtag", 
-    "gatsby-plugin-image", 
-    "gatsby-plugin-sitemap", 
+    "gatsby-plugin-google-gtag",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp", 
-  {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  },
-  {
-    resolve: 'gatsby-plugin-mdx',
-    options: {
-      defaultLayouts: {
-        default: require.resolve('./src/components/layout.js')
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
       },
-      gatsbyRemarkPlugins:[{ 
-        resolve: 'gatsby-remark-images', 
-        options: {
-          maxWidth: 590,
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
         },
-      }],
-    }
-  },
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      path: `${__dirname}/content/blog`,
-      name: `posts`,
-    },
-    __key: "posts"
-  },
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": `${__dirname}/src/images/`
-    },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": `${__dirname}/src/pages/`
-    },
-    __key: "pages"
-  },
-  {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 630,
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 590,
+            },
           },
-        },
-        {
-          resolve: `gatsby-remark-responsive-iframe`,
-          options: {
-            wrapperStyle: `margin-bottom: 1.0725rem`,
-          },
-        },
-      ],
+        ],
+      },
     },
-  }]
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images/`,
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`,
+      },
+      __key: "pages",
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+        ],
+      },
+    },
+  ],
 };
