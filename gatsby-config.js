@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-google-gtag",
+    "gatsby-plugin-gtag",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
@@ -39,6 +39,14 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog`,
+        name: `posts`,
+      },
+      __key: "posts",
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -77,3 +85,4 @@ module.exports = {
     },
   ],
 };
+
