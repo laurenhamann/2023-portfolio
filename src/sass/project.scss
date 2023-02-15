@@ -20,8 +20,10 @@
         a {
             cursor: pointer;
             color: color.$offWhite;
-            h1 {
-                text-align: center;
+            align-self: center;
+            img {
+                height: 100px;
+                margin: 5px auto;
             }
         }
         p {

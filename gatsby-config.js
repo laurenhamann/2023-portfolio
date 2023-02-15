@@ -25,6 +25,20 @@ module.exports = {
     }
   },
   {
+    resolve: 'gatsby-plugin-mdx',
+    options: {
+      defaultLayouts: {
+        default: require.resolve('./src/components/layout.js')
+      },
+      gatsbyRemarkPlugins:[{ 
+        resolve: 'gatsby-remark-images', 
+        options: {
+          maxWidth: 590,
+        },
+      }],
+    }
+  },
+  {
     resolve: `gatsby-source-filesystem`,
     options: {
       path: `${__dirname}/content/blog`,
@@ -61,20 +75,6 @@ module.exports = {
           resolve: `gatsby-remark-responsive-iframe`,
           options: {
             wrapperStyle: `margin-bottom: 1.0725rem`,
-          },
-        },
-        `gatsby-remark-prismjs`,
-      ],
-    },
-  },
-  {
-    resolve: `gatsby-plugin-mdx`,
-    options: {
-      gatsbyRemarkPlugins: [
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 1200,
           },
         },
       ],

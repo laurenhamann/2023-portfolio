@@ -26,3 +26,7 @@ h1:not(#project-title, #title) {
 h1:not(#title) {
     font-size: 2rem;
 }
+
+#projects .project-card a .ts-img {
+    height: 200px;
+}

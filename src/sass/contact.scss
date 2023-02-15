@@ -1,6 +1,7 @@
 @use 'colors' as color;
 
 #contact {
+    border-top: 3px solid color.$golden;
     display: flex;
     flex-direction: column;
     align-items: center;

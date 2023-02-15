@@ -10,6 +10,10 @@ header:not(#small-header) {
     background-blend-mode: lighten;
     background-size: 400px 100vh;
     background-position: -200px 0, calc(200px + 100%) 0;
+
+    #Layer_1-2 {
+        color: red;
+    }
     #title {
         font-size: 3.5rem;
         color: color.$rust;
