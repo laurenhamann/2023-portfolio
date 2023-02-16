@@ -1,25 +1,28 @@
-@use 'colors' as color;
+@use "colors" as color;
 
 #small-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: url('../images/star-burst.svg'), url('../images/star-burst.svg') ;
-    background-repeat: no-repeat;
-    background-blend-mode: lighten;
-    background-size: 200px 20vh;
-    background-position: -100px 0, calc(100px + 100%) 0;
-    border-bottom: 3px solid color.$rust;
-    #title {
-        font-size: 3.5rem;
-        color: color.$rust;
-        text-shadow: 0 5px 0 color.$navy,
-                    0 10px 0 color.$lightBlue;
-        text-align: center;
-    }
-    #subtitle {
-        font-size: 1.5rem;
-        color: color.$golden;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("../images/star-burst.svg"),
+    url("../images/star-burst.svg");
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-size: 200px 20vh;
+  background-position: -100px 0, calc(100px + 100%) 0;
+  border-bottom: 3px solid color.$rust;
+  a {
+    text-decoration: none;
+  }
+  #title {
+    font-size: 3.5rem;
+    color: color.$rust;
+    text-shadow: 0 5px 0 color.$navy, 0 10px 0 color.$lightBlue;
+    text-align: center;
+  }
+  #subtitle {
+    font-size: 1.5rem;
+    color: color.$golden;
+  }
 }

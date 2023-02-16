@@ -1,47 +1,62 @@
-@use 'colors' as color;
+@use "colors" as color;
 
 #projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  .project-card {
+    width: 80vw;
+    min-height: fit-content;
+    height: 300px;
+    background: linear-gradient(
+      45deg,
+      hsla(180, 43%, 68%, 1) 0%,
+      hsla(232, 27%, 39%, 1) 100%
+    );
+    background: -moz-linear-gradient(
+      45deg,
+      hsla(180, 43%, 68%, 1) 0%,
+      hsla(232, 27%, 39%, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      hsla(180, 43%, 68%, 1) 0%,
+      hsla(232, 27%, 39%, 1) 100%
+    );
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    .project-card {
-        width: 80vw;
-        min-height: fit-content;
-        height: 300px;
-        background: linear-gradient(45deg, hsla(180, 43%, 68%, 1) 0%, hsla(232, 27%, 39%, 1) 100%);
-        background: -moz-linear-gradient(45deg, hsla(180, 43%, 68%, 1) 0%, hsla(232, 27%, 39%, 1) 100%);
-        background: -webkit-linear-gradient(45deg, hsla(180, 43%, 68%, 1) 0%, hsla(232, 27%, 39%, 1) 100%);
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 15px;
-        a {
-            cursor: pointer;
-            color: color.$offWhite;
-            align-self: center;
-            img {
-                height: 100px;
-                margin: 5px auto;
-            }
-        }
-        p {
-            color: color.$offWhite;
-        }
+    justify-content: center;
+    border-radius: 15px;
+    a {
+      cursor: pointer;
+      color: color.$offWhite;
+      align-self: center;
+      .mb-img {
+        width: 375px;
+      }
+      img {
+        height: 100px;
+        margin: 5px auto;
+      }
     }
+    p {
+      color: color.$offWhite;
+    }
+  }
 }
 
-@media only screen and (min-width:768px) {
-    #projects {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-        .project-card {
-            width: 45vw;
-            min-height: fit-content;
-            height: 300px;
-        }
+@media only screen and (min-width: 768px) {
+  #projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    .project-card {
+      width: 45vw;
+      min-height: fit-content;
+      height: 300px;
     }
+  }
 }
