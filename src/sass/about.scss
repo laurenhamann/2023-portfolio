@@ -1,18 +1,32 @@
-@use 'colors' as color;
-
+@use "colors" as color;
 
 #about {
-    border-top: 3px solid color.$golden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+  border-top: 3px solid color.$golden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5px;
 
-    #about-title {
-        font-size: 2rem;
+  #about-title {
+    font-size: 2rem;
+  }
+
+  p {
+    max-width: 800px;
+    font-size: 1.2rem;
+
+    span:nth-child(even) {
+      color: color.$titlePink;
     }
-    p{
-        max-width: 800px;
-        font-size: 1.2rem;
+    span:nth-child(odd):not(.words) {
+      color: color.$titleLight;
     }
+    .words {
+      color: color.$rust;
+    }
+    hr {
+      color: color.$golden;
+    }
+  }
 }

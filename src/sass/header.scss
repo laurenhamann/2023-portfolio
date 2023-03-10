@@ -1,34 +1,52 @@
-@use 'colors' as color;
+@use "colors" as color;
 
 header:not(#small-header) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   background-image: url("../images/daisy.svg"), url("../images/daisy.svg");
+  //   background-repeat: no-repeat;
+  //   background-blend-mode: lighten;
+  //   background-size: 200px 100vh;
+  //   background-position: -20px 0, calc(20px + 100%) 0;
+
+  #Layer_1-2 {
+    color: red;
+  }
+  #title {
+    font-size: 3.5rem;
+    color: color.$titlePink;
+    text-shadow: 0 5px 0 color.$titleLight, 0 10px 0 color.$lightBlue;
+  }
+  #subtitle {
+    font-size: 1.5rem;
+    color: color.$golden;
+  }
+
+  .flex-title {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/star-burst.svg'), url('../images/star-burst.svg') ;
-    background-repeat: no-repeat;
-    background-blend-mode: lighten;
-    background-size: 400px 100vh;
-    background-position: -200px 0, calc(200px + 100%) 0;
-
-    #Layer_1-2 {
-        color: red;
+    img {
+      height: 30px;
+      width: 30px;
     }
-    #title {
-        font-size: 3.5rem;
-        color: color.$rust;
-        text-shadow: 0 5px 0 color.$navy,
-                    0 10px 0 color.$lightBlue;
-    }
-    #subtitle {
-        font-size: 1.5rem;
-        color: color.$golden;
-    }
+  }
 }
 
-@media only screen and (min-width:768px) {
-    header:not(#small-header) {
-        background-size: 500px 100vh;
-        background-position: -250px 0, calc(250px + 100%) 0;
+@media only screen and (min-width: 768px) {
+  header:not(#small-header) {
+    .flex-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 60px;
+        width: 60px;
+      }
     }
+  }
 }
