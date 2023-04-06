@@ -8,6 +8,7 @@ import img from "../images/PIXELS.svg";
 import bookimg from "../images/bookblog.svg";
 import ts from "../images/ts.png";
 import github from "../images/github.png";
+import Seo from "../components/seo";
 const IndexPage = () => {
   return (
     <Layout>
@@ -44,4 +45,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <Seo title="All posts" />;

@@ -1,14 +1,8 @@
 import React from "react";
-import '../sass/index.scss';
-
-
+import "../sass/index.scss";
 
 const Layout = ({ children }) => {
-    return (
-        <>
-            {children}
-        </>
-    )
-}
+  return <>{children}</>;
+};
 
 export default Layout;
