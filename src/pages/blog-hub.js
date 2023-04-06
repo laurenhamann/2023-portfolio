@@ -4,6 +4,7 @@ import useBlogs from "../hooks/use-blogs";
 import { Link } from "gatsby";
 import { SmallIntro } from "../components/small-intro";
 import { Contact } from "../components/contact";
+import Seo from "../components/seo";
 const BlogHub = () => {
   const posts = useBlogs();
   return (
@@ -32,3 +33,7 @@ const BlogHub = () => {
 };
 
 export default BlogHub;
+
+export const Head = () => {
+  return <Seo title="Blog Hub" />;
+};

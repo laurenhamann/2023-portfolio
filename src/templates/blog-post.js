@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import { SmallIntro } from "../components/small-intro";
 import { Contact } from "../components/contact";
-
+import Seo from "../components/seo";
 const BlogPostTemplate = ({ data: { markdownRemark: post } }) => {
   return (
     <Layout>
@@ -42,3 +42,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = ({ data: { markdownRemark: post } }) => {
+  return <Seo title={post.frontmatter.title} description={post.excerpt} />;
+};
