@@ -6,10 +6,10 @@ export const Contact = () => (
     <h1> Want More? </h1>
     <div id="contact-container">
       <a
-        href="https://www.linkedin.com/in/lauren-hamann-773701214/"
+        href="https://www.linkedin.com/in/lauren-hamann/"
         onClick="window.open(this.href,'_blank');return false;"
       >
-        Linkdin
+        Linkedin
       </a>
       <a
         href="https://artfullybylauren.etsy.com"

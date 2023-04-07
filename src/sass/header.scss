@@ -1,27 +1,27 @@
 @use "colors" as color;
+@use "fontsizes" as fs;
 
-header:not(#small-header) {
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //   background-image: url("../images/daisy.svg"), url("../images/daisy.svg");
-  //   background-repeat: no-repeat;
-  //   background-blend-mode: lighten;
-  //   background-size: 200px 100vh;
-  //   background-position: -20px 0, calc(20px + 100%) 0;
+  border-bottom: 3px solid color.$rust;
 
-  #Layer_1-2 {
-    color: red;
+  a {
+    text-decoration: none;
   }
   #title {
-    font-size: 3.5rem;
+    font-size: clamp(fs.$title_min, fs.$title_mid, fs.$title_max);
     color: color.$titlePink;
-    text-shadow: 0 5px 0 color.$titleLight, 0 10px 0 color.$lightBlue;
+    text-shadow: 0 5px 0 color.$rust, 0 10px 0 color.$deepRust;
   }
   #subtitle {
     font-size: 1.5rem;
     color: color.$golden;
+    font-family: "freight-big-pro", serif;
+    font-weight: 300;
+    font-style: normal;
   }
 
   .flex-title {
@@ -37,7 +37,7 @@ header:not(#small-header) {
 }
 
 @media only screen and (min-width: 768px) {
-  header:not(#small-header) {
+  header {
     .flex-title {
       display: flex;
       flex-direction: row;

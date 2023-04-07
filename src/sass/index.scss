@@ -1,32 +1,50 @@
-@use 'colors' as color;
-@use 'header';
-@use 'project';
-@use 'about';
-@use 'contact';
-@use 'small-header';
-@use 'blog-hub';
-@use 'blog-post';
+@use "colors" as color;
+@use "header";
+@use "project";
+@use "about";
+@use "contact";
+@use "blog-hub";
+@use "blog-post";
+@use "fontsizes" as fs;
 
 body {
-    margin: 0;
-    background-color: color.$offWhite;
+  margin: 0;
+  background-color: color.$offWhite;
 }
 header:not(#small-header),
-section:not(#contact, .article-section) {
-    min-height: 90vh;
-    height: fit-content;
-    width: 100vw;
-    margin: 5vh auto;
+section:not(#contact, .article-section, #about) {
+  min-height: 90vh;
+  height: fit-content;
+  width: 100vw;
+  margin: 5vh auto;
 }
 
 h1:not(#project-title, #title) {
-    color: color.$navy;
-}
-
-h1:not(#title) {
-    font-size: 2rem;
+  color: color.$navy;
 }
 
 #projects .project-card a .ts-img {
-    height: 200px;
+  height: 200px;
+}
+
+h1 {
+  font-family: "omnes-pro", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  &:not(#title) {
+    font-size: clamp(fs.$h1_min, fs.$h1_mid, fs.$h1_max);
+  }
+}
+
+p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h2 {
+  font-size: clamp(fs.$h2_min, fs.$h2_mid, fs.$h2_max);
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }

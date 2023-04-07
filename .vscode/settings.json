@@ -18,5 +18,11 @@
     "titleBar.inactiveBackground": "#3066f099",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#3066f0"
+  "peacock.color": "#3066f0",
+  "grammarly.selectors": [
+    {
+      "language": "markdown",
+      "scheme": "file"
+    }
+  ]
 }
