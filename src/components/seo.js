@@ -31,7 +31,7 @@ const Seo = ({ description, title, children }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <link rel="stylesheet" href="https://use.typekit.net/nwl0wdq.css"></link>
+      <link rel="stylesheet" href="https://use.typekit.net/dqe6pun.css"></link>
       {children}
     </>
   );

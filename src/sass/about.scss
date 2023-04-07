@@ -1,5 +1,5 @@
 @use "colors" as color;
-
+@use "fontsizes" as fs;
 #about {
   border-top: 3px solid color.$golden;
   display: flex;
@@ -7,23 +7,33 @@
   align-items: center;
   margin: 0 auto;
   padding: 5px;
+  width: 80vw;
 
   #about-title {
     font-size: 2rem;
   }
+  h3 {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 
   p {
     max-width: 800px;
-    font-size: 1.2rem;
-
-    span:nth-child(even) {
-      color: color.$titlePink;
+    font-size: clamp(fs.$p_min, fs.$p_mid, fs.$p_max);
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    span {
+      margin-left: 20px;
     }
-    span:nth-child(odd):not(.words) {
-      color: color.$titleLight;
+
+    span:not(.words) {
+      color: color.$titlePink;
+      text-shadow: 0 1px 0 color.$rust, 0 2px 0 color.$deepRust;
     }
     .words {
-      color: color.$rust;
+      color: color.$deepRust;
     }
     hr {
       color: color.$golden;

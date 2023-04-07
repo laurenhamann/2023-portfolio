@@ -45,4 +45,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <Seo title="All posts" />;
+export const Head = () => <Seo title="Home" />;
